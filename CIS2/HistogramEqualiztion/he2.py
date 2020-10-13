@@ -9,10 +9,10 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 #
-url="nightview.png"
-#url="livingroom.png"
+#url="nightview.png"
+url="livingroom.png"
 
-url="nocat.jpg"
+#url="nocat.jpg"
 img=np.array(Image.open(url).convert('L'))
 
 
@@ -32,4 +32,15 @@ for pix in range(0,256):
     img1[img==pix]=sk[pix]
     
 #img1=sk[img]
-Image.fromarray(img1).show()
+#Image.fromarray(img1).show()
+plt.figure(figsize=(15,5))
+plt.subplot(1,2,1)
+plt.title("origin")
+plt.imshow(Image.open(url),'gray')
+
+plt.subplot(1,2,2)
+plt.title("processed")
+plt.imshow(img1,'gray')
+
+plt.show()
+
