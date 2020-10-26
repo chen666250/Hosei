@@ -10,8 +10,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 #
 #url="nightview.png"
-url="livingroom.png"
-
+#url="livingroom.png"
+# url='cat001.jpg'
+url='cat002.jpg'
+#url='cat003.jpg'
 #url="nocat.jpg"
 img=np.array(Image.open(url).convert('L'))
 
